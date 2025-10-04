@@ -14,6 +14,7 @@ body{
     font-size: 20px;
     color: #556B2F;
     background-color: #F8F5E9;
+    overflow-x: hidden;
 }
 main {
     justify-content: center;
@@ -25,12 +26,13 @@ header{
     color: var(--color-heeaders);
     height: 8vh;
     border-bottom: #D4AF37 solid 1px;
+    justify-content: center;
 }
 #slider-main {
     display: flex;
     padding: 0;
     width: 300%; 
-    animation: slide 15s infinite alternate ease-in-out;
+    animation: slide 12s infinite linear;
     .content-img-text{
         display: flex;
         width: 100%;
@@ -46,20 +48,23 @@ header{
             display: block;
         }
         .text-slider{
-            width: 40%;
-            left: 10%;
+            width: 28%;
+            left: 6%;
             position: absolute;
             p{
                 font-size: 2rem;
                 color: var(--color-parrafos);
             }
             .button{
-                width: 25%;
+                position: absolute;
+                padding: 2%;
+                width: 42%;
+                height: 40%;
                 background-color: var(--background-buttons);
                 text-align: center;
                 margin-top: 2%;
                 border-radius: 64px;
-                a{
+                a{ 
                     color: var(--color-buttons);
                     text-decoration: none;
                 }
@@ -67,14 +72,34 @@ header{
         }
     }
 }
+#relojes-destacados{
+    display: grid;
+    grid-template-columns: 10% repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    .text-descriptivo-destacados{
+        grid-row: span 2 / span 2 5%;
+    }
+    .reloj-destacado:nth-child(4){
+        grid-column-start: 2;
+    }
+    .reloj-destacado:nth-child(5){
+        grid-column-start: 3;
+    }
+    .reloj-destacado:nth-child(6){
+        grid-column-start: 4;
+    }
+}
 
 
 @keyframes slide {
     0% { transform: translateX(0); }
     25% { transform: translateX(0); }
-    33.33% { transform: translateX(-33.333%); }
-    58.33% { transform: translateX(-33.333%); }
-    66.66% { transform: translateX(-66.666%); }
-    91.66% { transform: translateX(-66.666%); }
-    100% { transform: translateX(0); }
+  
+    33.33% { transform: translateX(-33.4%); } 
+    58.33% { transform: translateX(-33.4%); }
+  
+    66.66% { transform: translateX(-66.6%); } 
+    91.66% { transform: translateX(-66.6%); }
+    
+    100% {transform: translateX(0);}
 }
