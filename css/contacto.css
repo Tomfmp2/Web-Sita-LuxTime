@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "casual";
+    src: url("../assets/fonts/Casual-Font/Casual-Regular.ttf") format("truetype");
+  }
+@font-face{
+    font-family: "montserrat";
+    src: url("../assets/fonts/montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+@font-face{
+    font-family: "playFair";
+    src: url("../assets/fonts/play-fair-display/PlayfairDisplay-VariableFont_wght.ttf") format(truetype);
+}
+@font-face{
+    font-family: "gotham";
+    src: url("../assets/fonts/gotham-similar-fonts/homepage-baukasten/Homepagebaukasten-Bold.ttf") format(truetype);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --parrafos-font-family:"montserrat";
+    --titles-font-family: "playFair";
+    --titles-header:"casual";
+    --color-parrafos: #EFE8DA;
+    --background-buttons: #556B2F;
+    --color-buttons:#EFE8DA;
+    --backgroun-headers: #1C1C1C;
+    --color-heeaders:#EFE8DA;
+    --color-borderHeader:#556b2f;
+    --background-relojesDestacados:#1C1C1C;
+    --color-borderDestacados:#556b2f;
+    --color-titles-destacados:#556b2f;
+    --color2-titles-destacados:#1C1C1C;
+}
+body{
+    background-image: url("../assets/img/background-contact/rolex-4432382.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a{
+    text-decoration: none;
+    color: var(--color-parrafos);
+}
+input{
+    border: none;
+    outline: none;
+    color: var(--color-parrafos);
+}
+header{
+    font-family: var(--titles-header-font-family);
+    display: flex;
+    background-color: var(--backgroun-headers);
+    color: var(--color-heeaders); 
+    height: 8vh;
+    border-bottom: var(--color-borderHeader) solid 3px;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 2% ;
+    overflow: hidden;
+    .opciones{
+        border-left: solid 2px var(--color-borderHeader);
+        margin-left: 1%;
+        margin-right: 2%;
+        .text-header{
+            cursor: pointer;
+            margin-left: 15px;
+        }
+    }
+    .opciones:nth-child(3){
+        margin: 0;
+    }
+    .opciones:nth-child(4){
+        margin: 0;
+    }
+    .logo{
+        margin: auto;
+        h1{
+            font-family: var(--titles-header-font-family);
+        }
+    }
+}
+
+section{
+    #contenedor-contact{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        background-color: var(--color-heeaders);
+        border: var(--backgroun-headers) solid 2px;
+        height: 80vh;
+        margin: auto;
+        text-align: center;
+        gap: 5%;
+        #encabezado{
+            background-color: #1C1C1C;
+                color: var(--color-heeaders);
+        }
+        .entradas{
+            width: 80%;
+            height: 70%;
+            background-color: #B0A695;
+            color: var(--color-titles-destacados);
+            border: solid 2px var(--background-buttons);
+        }
+        #nombre-apellido-celular{
+            margin-bottom: 6%;
+            .entradas{
+                margin-bottom: 1.5%;
+            }
+        }
+        #contacto{
+            .entradas{
+                margin-bottom: 1.5%
+            }
+        }
+        #content-buttons{   
+            margin-top: 20%;
+            .button{
+                color: var(--color2-titles-destacados);
+                background-color: #B0A695;
+                height: 5vh;
+                width: 80%;
+                margin-bottom: 3%;
+            }
+            .button2{
+                color: var(--color-buttons);
+                background-color: var(--backgroun-headers);
+
+            }
+        }
+    }
+}
