@@ -1,9 +1,33 @@
+@font-face {
+  font-family: "casual";
+  src: url("../assets/fonts/Casual-Font/Casual-Regular.ttf") format("truetype");
+}
+@font-face{
+    font-family: "montserrat";
+    src: url("../assets/fonts/montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+@font-face{
+    font-family: "playFair";
+    src: url("../assets/fonts/play-fair-display/PlayfairDisplay-VariableFont_wght.ttf") format(truetype);
+}
+@font-face{
+    font-family: "gotham";
+    src: url("../assets/fonts/gotham-similar-fonts/homepage-baukasten/Homepagebaukasten-Bold.ttf") format(truetype);
+}
 :root{
-    --color-parrafos: #f8f5e9;
+    --parrafos-font-family:"montserrat";
+    --titles-font-family: "playFair";
+    --titles-header:"casual";
+    --color-parrafos: #EFE8DA;
     --background-buttons: #556B2F;
-    --color-buttons:#F8F5E9;
-    --backgroun-headers:#1C1C1C;
-    --color-heeaders:#F8F5E9;
+    --color-buttons:#EFE8DA;
+    --backgroun-headers: #1C1C1C;
+    --color-heeaders:#EFE8DA;
+    --color-borderHeader:#556b2f;
+    --background-relojesDestacados:#1C1C1C;
+    --color-borderDestacados:#556b2f;
+    --color-titles-destacados:#556b2f;
+    --color2-titles-destacados:#1C1C1C;
 }
 * {
     margin: 0;
@@ -21,22 +45,50 @@ main {
     align-items: center;
 }
 header{
+    font-family: var(--titles-header-font-family);
     display: flex;
     background-color: var(--backgroun-headers);
-    color: var(--color-heeaders);
-    height: 8vh;
-    border-bottom: #D4AF37 solid 1px;
-    justify-content: center;
+    color: var(--color-heeaders); 
+    height: 10vh;
+    border-bottom: var(--color-borderHeader) solid 3px;
+    justify-content: left;
+    align-items: center;
+    .opciones{
+        border-left: solid 2px var(--color-borderHeader);
+        margin-left: 1%;
+        margin-right: 2%;
+        .text-header{
+            cursor: pointer;
+            margin-left: 15px;
+        }
+    }
+    .opciones:nth-child(3){
+        margin: 0;
+    }
+    .opciones:nth-child(4){
+        margin: 0;
+    }
+    .logo{
+        margin: auto;
+        h1{
+            font-family: var(--titles-header-font-family);
+        }
+    }
+}
+a{
+    text-decoration: none;
+    color: var(--color-parrafos);
 }
 #slider-main {
     display: flex;
     padding: 0;
     width: 300%; 
     animation: slide 12s infinite linear;
+    overflow: hidden;
     .content-img-text{
         display: flex;
         width: 100%;
-        height: 55vh;
+        height: 60vh;
         list-style: none;
         position: relative;
         align-items: center;
@@ -51,42 +103,110 @@ header{
             width: 28%;
             left: 6%;
             position: absolute;
+            border-left: 2px solid #556B2F ;
+            span{
+                font-family: var(--parrafos-font-famil);
+                margin-left: 4%;
+                color: var(--color-parrafos);
+                font-size: 1rem;
+            }
+            h2{
+                font-family: var(--titles-font-family);
+                color: var(--background-buttons);
+                background-color: var(--color-parrafos);
+                margin-left: 4%;
+                margin-top: 3%;
+                font-size: 2.2rem;
+            }
             p{
-                font-size: 2rem;
+                font-family: var(--parrafos-font-family);
+                margin-top: 3%;
+                margin-left: 4%;
+                font-size: 1.2rem;
                 color: var(--color-parrafos);
             }
             .button{
+                font-family: var(--parrafos-font-family);
                 position: absolute;
-                padding: 2%;
-                width: 42%;
-                height: 40%;
-                background-color: var(--background-buttons);
-                text-align: center;
+                margin-top: 6% ;
+                margin-left: 4%;
+                width: 38%;
+                height: 26%;
+                background-color: transparent;
+                color: var(--color-buttons);
                 margin-top: 2%;
-                border-radius: 64px;
-                a{ 
-                    color: var(--color-buttons);
-                    text-decoration: none;
-                }
+                border-style: none;
+                border: solid 2px var(--background-buttons);
+                border-radius: 64px ;
+                font-size: 1rem;
+                font-weight: bold;
+                cursor: pointer;
             }
         }
     }
 }
 #relojes-destacados{
-    display: grid;
-    grid-template-columns: 10% repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    .text-descriptivo-destacados{
-        grid-row: span 2 / span 2 5%;
+    background-color: var(--background-relojesDestacados);
+    #title-relojes-destacados{
+        width: 100%;
+        height: 25vh;
+        text-align:center;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-parrafos);
+        border-top: 2px solid var(--color-borderDestacados);
+        border-bottom: 2px solid var(--color-borderDestacados);
+        div{
+            font-family: var(--titles-font-family);
+            color: var(--color-titles-destacados);
+            margin-top:3%;
+            span{
+                font-family: var(--parrafos-font-family);
+                color: var(--color2-titles-destacados);
+            }
+        }
     }
-    .reloj-destacado:nth-child(4){
-        grid-column-start: 2;
-    }
-    .reloj-destacado:nth-child(5){
-        grid-column-start: 3;
-    }
-    .reloj-destacado:nth-child(6){
-        grid-column-start: 4;
+    #grid-relojes-destacados{
+        display: grid;
+        width: 75%;
+        height: auto;
+        margin: auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 2%;
+        padding: 20px;
+        background-color: var(--background-relojesDestacados);
+        .reloj-destacado{
+            height: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease;
+            .img-reloj-destacado{
+                width: 100%;
+                height:78%;
+                display: block;
+            }
+            .info {
+                padding: 15px;
+                background-color: #F5F0E6;
+                height: 100%;
+                .name-reloj-destacado{
+                    font-family: var(--titles-font-family);
+                    margin: 0;
+                    font-size: 1.2rem;
+                    color: #556B2F;
+                }
+                .descripcion-reloj-destacado{
+                    font-family: var(--parrafos-font-family);
+                    margin: 5px 0 0;
+                    font-size: 0.9rem;
+                    color: #333;
+                }
+            }
+        }
     }
 }
 
@@ -102,4 +222,7 @@ header{
     91.66% { transform: translateX(-66.6%); }
     
     100% {transform: translateX(0);}
+}
+.reloj-destacado:hover{
+    transform: scale(1.05);
 }
