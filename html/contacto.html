@@ -25,7 +25,7 @@
             </div>
         </header>
         <main>
-            <section id="registro de datos">
+            <form id="registro-datos">
                 <div id="contenedor-contact">
                     <div id="encabezado">
                         <h3>Suscríbase a LuxTime
@@ -33,20 +33,20 @@
                         </h3>
                     </div>
                     <div id="nombre-apellido-celular">
-                        <input class="entradas Nombre" type="text" placeholder="Nombre">
+                        <input class="entradas Nombre importante" type="text" placeholder="Nombre" required>
                         <br>
-                        <input class="entradas Apellido" type="text" 
-                        placeholder="Apellido">
+                        <input class="entradas Apellido importante" type="text" 
+                        placeholder="Apellido" required>
                         <br>
-                        <input class="entradas numerocontacto" type="tel" placeholder="Numero Telefonico">
+                        <input class="entradas numerocontacto importante" type="tel" placeholder="Numero Telefonico" required>
                     </div>
                     <br>
                     <div id="contacto">
-                        <input class="entradas email" type="email" placeholder="Email">
+                        <input class="entradas email importante" type="email" placeholder="Email" required>
                         <br>
-                        <input class="entradas redsocial" type="text" placeholder="Redes Sociales">
+                        <input class="entradas redsocial opcional" type="text" placeholder="Redes Sociales">
                         <br>
-                        <input class="entradas mensaje" type="text" placeholder="mensaje">
+                        <input class="entradas mensaje opcional" type="text" placeholder="mensaje">
                         <br>
                     </div>
                     <div id="content-buttons">
@@ -55,7 +55,7 @@
                         <input class="button button2" type="button" value="REGISTRAR MIS DATOS">
                     </div>
                 </div>
-            </section>
+            </form>
         </main>
     </body>
 </html>

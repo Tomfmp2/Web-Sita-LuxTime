@@ -82,7 +82,7 @@ header{
     }
 }
 
-section{
+#registro-datos{
     #contenedor-contact{
         display: flex;
         flex-direction: column;
@@ -100,9 +100,11 @@ section{
         .entradas{
             width: 80%;
             height: 70%;
-            background-color: #B0A695;
             color: var(--color-titles-destacados);
             border: solid 2px var(--background-buttons);
+        }
+        .opcional{
+            background-color: #B0A695;
         }
         #nombre-apellido-celular{
             margin-bottom: 6%;
@@ -132,3 +134,12 @@ section{
         }
     }
 }
+.importante:valid {
+    border-color: green;
+    background-color: lightgreen;
+  }
+.importante:invalid {
+    border-color: red;
+    background-color: salmon;  
+}
+    
