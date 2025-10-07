@@ -1,18 +1,18 @@
 @font-face {
   font-family: "casual";
-  src: url("../assets/fonts/Casual-Font/Casual-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/Casual-Font/Casual-Regular.ttf") format('truetype');
 }
 @font-face{
     font-family: "montserrat";
-    src: url("../assets/fonts/montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+    src: url("../assets/fonts/montserrat/Montserrat-VariableFont_wght.ttf") format('truetype');
 }
 @font-face{
     font-family: "playFair";
-    src: url("../assets/fonts/play-fair-display/PlayfairDisplay-VariableFont_wght.ttf") format(truetype);
+    src: url("../assets/fonts/play-fair-display/PlayfairDisplay-VariableFont_wght.ttf") format('truetype');
 }
 @font-face{
     font-family: "gotham";
-    src: url("../assets/fonts/gotham-similar-fonts/homepage-baukasten/Homepagebaukasten-Bold.ttf") format(truetype);
+    src: url("../assets/fonts/gotham-similar-fonts/homepage-baukasten/Homepagebaukasten-Bold.ttf") format('truetype');
 }
 :root{
     --parrafos-font-family:"montserrat";
@@ -24,7 +24,7 @@
     --backgroun-headers: #1C1C1C;
     --color-heeaders:#F7F4EA;
     --color-borderHeader:#556b2f;
-    --background-relojesDestacados:#1C1C1C;
+    --background-relojesDestacados:#F7F4EA;
     --color-borderDestacados:#556b2f;
     --color-titles-destacados:#556b2f;
     --color2-titles-destacados:#1C1C1C;
@@ -40,10 +40,15 @@ body{
     color: #556B2F;
     background-color: #F8F5E9;
     overflow-x: hidden;
+    padding: 0;
 }
 main {
     justify-content: center;
     align-items: center;
+    padding: 0;
+}
+p{
+    font-family: var(--parrafos-font-family);
 }
 #top{
     font-family: var(--titles-header-font-family);
@@ -106,7 +111,7 @@ a{
             position: absolute;
             border-left: 2px solid #556B2F ;
             span{
-                font-family: var(--parrafos-font-famil);
+                font-family: var(--parrafos-font-family);
                 margin-left: 4%;
                 color: var(--color-parrafos);
                 font-size: 1rem;
@@ -121,7 +126,7 @@ a{
             }
             p{
                 font-family: var(--parrafos-font-family);
-                margin-top: 3%;
+                margin-top: 1%;
                 margin-left: 4%;
                 font-size: 1.2rem;
                 color: var(--color-parrafos);
@@ -159,13 +164,18 @@ a{
         background-color: var(--color-parrafos);
         border-top: 2px solid var(--color-borderDestacados);
         border-bottom: 2px solid var(--color-borderDestacados);
+        font-size: 2rem;
         div{
             font-family: var(--titles-font-family);
             color: var(--color-titles-destacados);
             margin-top:3%;
+            h1{
+                margin: 0;
+            }
             span{
                 font-family: var(--parrafos-font-family);
                 color: var(--color2-titles-destacados);
+                font-size: 1.5rem;
             }
         }
     }
@@ -183,7 +193,7 @@ a{
             height: 100%;
             background: #fff;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
             overflow: hidden;
             text-align: center;
             transition: transform 0.3s ease;
@@ -196,7 +206,7 @@ a{
             .info {
                 border-top: var(--color-borderDestacados) solid 1px;
                 padding: 15px;
-                background-color: #F5F0E6;
+                background-color: #F5F5DC;
                 height: 100%;
                 .name-reloj-destacado{
                     font-family: var(--titles-font-family);
@@ -214,6 +224,7 @@ a{
         }
     }
 }
+
 footer{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -266,240 +277,289 @@ footer{
         
     }
 }
-.header-linea-tiempo{
-            min-width: 100%;
-        }
+.header-linea-tiempo {
+    margin-top: 4%;
+    min-width: 100%;
+    align-items: center;
+  
+    .titles-line-tiempo {
+      text-align: center;
+      color: var(--background-buttons);
+      margin-bottom: 80px;
+      font-size: 2.5em;
+      font-family: var(--titles-font-family);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  .timeline {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    min-width: 1400px;
+    margin: 0 auto;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-50%);
+      border-radius: 2px;
+    }
+  }
+  
+  .timeline-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 0 20px;
+  
+    &:nth-child(odd) {
+      .timeline-card {
+        order: 1;
+        margin-bottom: 80px;
+      }
+  
+      .timeline-dot {
+        order: 2;
+      }
+  
+      .connector {
+        top: 100%;
+        margin-top: -40px;
+      }
+    }
+  
+    &:nth-child(even) {
+      .timeline-card {
+        order: 2;
+        margin-top: 80px;
+      }
+  
+      .timeline-dot {
+        order: 1;
+      }
+  
+      .connector {
+        bottom: 100%;
+        margin-bottom: -40px;
+      }
+    }
+  
+    &:hover {
+      .timeline-dot {
+        background: var(--background-buttons);
+        transform: scale(1.6);
+        border-color: white;
+        box-shadow: 0 0 25px rgba(8, 26, 2, 0.8);
+      }
+    }
+  }
+  
+  .timeline-dot {
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border: 5px solid var(--background-buttons);
+    border-radius: 50%;
+    z-index: 2;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+  }
+  
+  .timeline-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    width: 220px;
+    min-height: 200px;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--background-buttons), var(--background-relojesDestacados));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+  
+    &:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+      z-index: 10;
+  
+      &::before {
+        transform: scaleX(1);
+      }
+  
+      .description {
+        max-height: 200px;
+        opacity: 1;
+        margin-top: 10px;
+      }
+    }
+  }
+  
+  .icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--background-buttons), var(--background-color-footer));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    margin: 0 auto 15px;
+  }
+  
+  .year {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--background-color-footer);
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .description {
+    color: #666;
+    line-height: 1.5;
+    font-size: 0.9em;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+  }
+  
+  .connector {
+    position: absolute;
+    width: 2px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  @media (max-width: 1200px) {
+    .timeline {
+      min-width: 1200px;
+    }
+  
+    .timeline-card {
+      width: 180px;
+      min-height: 180px;
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 2em;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .timeline {
+      min-width: 900px;
+    }
+  
+    .timeline-card {
+      width: 140px;
+      min-height: 160px;
+      padding: 15px;
+    }
+  
+    .icon {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+    }
+  
+    .year {
+      font-size: 1.1em;
+    }
+  
+    .title {
+      font-size: 1em;
+    }
+  
+    .description {
+      font-size: 0.8em;
+    }
+  
+    h1 {
+      font-size: 1.5em;
+      margin-bottom: 60px;
+    }
+  }
 
-        h1 {
-            text-align: center;
-            color: var(--background-buttons);
-            margin-bottom: 80px;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+#historico{
+    margin: 5%;
+    padding: 3%;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    #Origen{
+        text-align: center;
+        border-radius: 15px;
+        height: 30vh;
+        padding: 2%;
+        .titular{
+            h1{
+                font-family: var(--titles-font-family);
+                font-size: 3rem;
+            }
+            span{
+                color: var(--color2-titles-destacados);
+                font-size: 0.8rem;
+                font-family: var(--parrafos-font-family);    
+            }
         }
-
-        .timeline {
-            position: relative;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 40px 0;
-            min-width: 1400px;
-            margin: 0 auto;
+        p{
+            color: var(--color2-titles-destacados);
+            margin-top: 2%;
         }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: rgba(255,255,255,0.3);
-            transform: translateY(-50%);
-            border-radius: 2px;
-        }
-
-        .timeline-item {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            padding: 0 20px;
-        }
-
-        .timeline-item:nth-child(odd) .timeline-card {
-            order: 1;
-            margin-bottom: 80px;
-        }
-
-        .timeline-item:nth-child(odd) .timeline-dot {
-            order: 2;
-        }
-
-        .timeline-item:nth-child(even) .timeline-card {
-            order: 2;
-            margin-top: 80px;
-        }
-
-        .timeline-item:nth-child(even) .timeline-dot {
-            order: 1;
-        }
-
-        .timeline-dot {
-            width: 24px;
-            height: 24px;
-            background: white;
-            border: 5px solid #667eea;
-            border-radius: 50%;
-            z-index: 2;
-            transition: all 0.3s ease;
-            flex-shrink: 0;
-        }
-
-        .timeline-item:hover .timeline-dot {
-            background: #667eea;
-            transform: scale(1.6);
-            border-color: white;
-            box-shadow: 0 0 25px rgba(102, 126, 234, 0.8);
-        }
-
-        .timeline-card {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            width: 220px;
-            min-height: 200px;
-        }
-
-        .timeline-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--background-buttons), var(--background-relojesDestacados));
-            transform: scaleX(0);
+    }
+    #identidad-empresa{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        text-align: center;
+        gap: 2%;
+        .card{
+            box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+            padding: 1%;
             transition: transform 0.3s ease;
-        }
-
-        .timeline-card:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-            z-index: 10;
-        }
-
-        .timeline-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--background-buttons), var(--background-color-footer));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 24px;
-            margin: 0 auto 15px;
-        }
-
-        .year {
-            font-size: 1.3em;
-            font-weight: bold;
-            color: var(--background-color-footer);
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        .title {
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        .description {
-            color: #666;
-            line-height: 1.5;
-            font-size: 0.9em;
-            text-align: center;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, opacity 0.4s ease;
-            opacity: 0;
-        }
-
-        .timeline-card:hover .description {
-            max-height: 200px;
-            opacity: 1;
-            margin-top: 10px;
-        }
-
-        .connector {
-            position: absolute;
-            width: 2px;
-            height: 40px;
-            background: rgba(255,255,255,0.5);
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .timeline-item:nth-child(odd) .connector {
-            top: 100%;
-            margin-top: -40px;
-        }
-
-        .timeline-item:nth-child(even) .connector {
-            bottom: 100%;
-            margin-bottom: -40px;
-        }
-
-        @media (max-width: 1200px) {
-            body {
-                padding: 40px 20px;
-            }
-
-            .timeline {
-                min-width: 1200px;
-            }
-
-            .timeline-card {
-                width: 180px;
-                min-height: 180px;
-                padding: 20px;
-            }
-
-            h1 {
-                font-size: 2em;
+            p{
+                margin: 2%;
+                color: var(--color2-titles-destacados);
+                font-size: 1rem;
             }
         }
-
-        @media (max-width: 768px) {
-            .timeline {
-                min-width: 900px;
-            }
-
-            .timeline-card {
-                width: 140px;
-                min-height: 160px;
-                padding: 15px;
-            }
-
-            .icon {
-                width: 40px;
-                height: 40px;
-                font-size: 20px;
-            }
-
-            .year {
-                font-size: 1.1em;
-            }
-
-            .title {
-                font-size: 1em;
-            }
-
-            .description {
-                font-size: 0.8em;
-            }
-
-            h1 {
-                font-size: 1.5em;
-                margin-bottom: 60px;
-            }
-        }
-
+    }
+}
 @keyframes slide {
     0% { transform: translateX(0); }
     25% { transform: translateX(0); }
@@ -516,6 +576,9 @@ footer{
     transform: scale(1.05);
 }
 .button:hover{
+    transform: scale(1.05);
+}
+.card:hover{
     transform: scale(1.05);
 }
 
