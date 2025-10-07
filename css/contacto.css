@@ -89,7 +89,7 @@ header{
         width: 30%;
         background-color: var(--color-heeaders);
         border: var(--backgroun-headers) solid 2px;
-        height: 80vh;
+        height: 84vh;
         margin: auto;
         text-align: center;
         gap: 5%;
@@ -99,7 +99,7 @@ header{
         }
         .entradas{
             width: 80%;
-            height: 70%;
+            height: 56%;
             color: var(--color-titles-destacados);
             border: solid 2px var(--background-buttons);
         }
@@ -125,11 +125,12 @@ header{
                 height: 5vh;
                 width: 80%;
                 margin-bottom: 3%;
+                transition: transform 0.3s ease;
             }
             .button2{
                 color: var(--color-buttons);
                 background-color: var(--backgroun-headers);
-
+                transition: transform 0.3s ease;
             }
         }
     }
@@ -142,4 +143,6 @@ header{
     border-color: red;
     background-color: salmon;  
 }
-    
+.button:hover{
+    transform: scale(1.05);
+}

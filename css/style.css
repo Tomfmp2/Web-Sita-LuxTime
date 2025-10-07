@@ -28,6 +28,7 @@
     --color-borderDestacados:#556b2f;
     --color-titles-destacados:#556b2f;
     --color2-titles-destacados:#1C1C1C;
+    --background-color-footer: #1C1C1C;
 }
 * {
     margin: 0;
@@ -44,7 +45,7 @@ main {
     justify-content: center;
     align-items: center;
 }
-header{
+#top{
     font-family: var(--titles-header-font-family);
     display: flex;
     background-color: var(--backgroun-headers);
@@ -141,12 +142,14 @@ a{
                 font-size: 1rem;
                 font-weight: bold;
                 cursor: pointer;
+                transition: transform 0.3s ease;
             }
         }
     }
 }
 #relojes-destacados{
     background-color: var(--background-relojesDestacados);
+    border-bottom: solid 2px var(--color-borderDestacados);
     #title-relojes-destacados{
         width: 100%;
         height: 25vh;
@@ -191,7 +194,7 @@ a{
                 margin-bottom: 5%;
             }
             .info {
-                border: var(--color-borderDestacados) solid 2px;
+                border-top: var(--color-borderDestacados) solid 1px;
                 padding: 15px;
                 background-color: #F5F0E6;
                 height: 100%;
@@ -212,8 +215,290 @@ a{
     }
 }
 footer{
-    height: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    background-color:var(--background-color-footer) ;
+    color: var(--color-parrafos);
+    font-family: var(--parrafos-font-family);
+    #header-footer{
+        grid-column: span 2 / span 2;
+        background-color: var(--background-color-footer);
+        height: 10vh;
+        border: none;
+        font-size: 1.2rem;
+        padding: 3%;
+    }
+    #dev-contacto-empresa{
+        grid-row: span 2 / span 2;
+        grid-column-start: 3;
+        border-left: solid 2px var(--color-borderHeader);
+        padding: 5%;
+        h3{
+            font-size: 1.2rem;
+            font-weight: normal;
+            margin-bottom: 2%;
+        }
+        #contact-dev{
+            margin-bottom: 0;
+            a{
+                #logo-github{
+                    width: 12%;
+                    height: 25%;
+                }
+            }
+        }
+        span{
+            font-size: 1.2rem;
+            font-weight: normal;
+        }
+    }
+    #copyright{
+        align-self: end;
+        grid-column: span 2 / span 2;
+        grid-row-start: 2;
+        font-size: 1rem;
+        #derechos{
+            margin-left: 2%;
+            margin-bottom: 1.5%;
+        }
+        
+    }
 }
+.header-linea-tiempo{
+            min-width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--background-buttons);
+            margin-bottom: 80px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .timeline {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 0;
+            min-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-50%);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-card {
+            order: 1;
+            margin-bottom: 80px;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+            order: 2;
+        }
+
+        .timeline-item:nth-child(even) .timeline-card {
+            order: 2;
+            margin-top: 80px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            order: 1;
+        }
+
+        .timeline-dot {
+            width: 24px;
+            height: 24px;
+            background: white;
+            border: 5px solid #667eea;
+            border-radius: 50%;
+            z-index: 2;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .timeline-item:hover .timeline-dot {
+            background: #667eea;
+            transform: scale(1.6);
+            border-color: white;
+            box-shadow: 0 0 25px rgba(102, 126, 234, 0.8);
+        }
+
+        .timeline-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            width: 220px;
+            min-height: 200px;
+        }
+
+        .timeline-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--background-buttons), var(--background-relojesDestacados));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            z-index: 10;
+        }
+
+        .timeline-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--background-buttons), var(--background-color-footer));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            margin: 0 auto 15px;
+        }
+
+        .year {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: var(--background-color-footer);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .description {
+            color: #666;
+            line-height: 1.5;
+            font-size: 0.9em;
+            text-align: center;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.4s ease;
+            opacity: 0;
+        }
+
+        .timeline-card:hover .description {
+            max-height: 200px;
+            opacity: 1;
+            margin-top: 10px;
+        }
+
+        .connector {
+            position: absolute;
+            width: 2px;
+            height: 40px;
+            background: rgba(255,255,255,0.5);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item:nth-child(odd) .connector {
+            top: 100%;
+            margin-top: -40px;
+        }
+
+        .timeline-item:nth-child(even) .connector {
+            bottom: 100%;
+            margin-bottom: -40px;
+        }
+
+        @media (max-width: 1200px) {
+            body {
+                padding: 40px 20px;
+            }
+
+            .timeline {
+                min-width: 1200px;
+            }
+
+            .timeline-card {
+                width: 180px;
+                min-height: 180px;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .timeline {
+                min-width: 900px;
+            }
+
+            .timeline-card {
+                width: 140px;
+                min-height: 160px;
+                padding: 15px;
+            }
+
+            .icon {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+
+            .year {
+                font-size: 1.1em;
+            }
+
+            .title {
+                font-size: 1em;
+            }
+
+            .description {
+                font-size: 0.8em;
+            }
+
+            h1 {
+                font-size: 1.5em;
+                margin-bottom: 60px;
+            }
+        }
 
 @keyframes slide {
     0% { transform: translateX(0); }
@@ -230,3 +515,7 @@ footer{
 .reloj-destacado:hover{
     transform: scale(1.05);
 }
+.button:hover{
+    transform: scale(1.05);
+}
+
