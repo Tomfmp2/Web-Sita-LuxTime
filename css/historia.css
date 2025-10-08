@@ -1,0 +1,531 @@
+@font-face {
+            font-family: "montserrat";
+            src: url("../assets/fonts/montserrat/Montserrat-VariableFont_wght.ttf") format('truetype');
+        }
+        @font-face{
+            font-family: "playFair";
+            src: url("../assets/fonts/play-fair-display/PlayfairDisplay-VariableFont_wght.ttf") format('truetype');
+        }
+        
+        :root{
+            --parrafos-font-family: "montserrat", Arial, sans-serif;
+            --titles-font-family: "playFair", serif;
+            --color-parrafos: #1C1C1C;
+            --background-buttons: #556B2F;
+            --color-buttons: #1C1C1C;
+            --backgroun-headers: #EBE9DF;
+            --color-heeaders: #1C1C1C;
+            --background-relojesDestacados: #FDFBF7;
+            --color-borderDestacados: #556b2f;
+            --color-titles-destacados: #556b2f;
+            --color2-titles-destacados: #1C1C1C;
+            --background-color-footer: #1C1C1C;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body{
+            font-size: 20px;
+            color: var(--color-parrafos);
+            background-color: var(--background-relojesDestacados);
+            overflow-x: hidden;
+            padding: 0;
+        }
+        
+        main {
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+        
+        p{
+            font-family: var(--parrafos-font-family);
+        }
+        
+        h1, h2, h3{
+            font-family: var(--titles-font-family);
+        }
+        
+        #historia-empresa{
+            width: 100%;
+            min-height: 100vh;
+        }
+        
+        #header-historia{
+            text-align: center;
+            padding: 60px 20px;
+            background-color: var(--backgroun-headers);
+            border-bottom: 3px solid var(--color-borderDestacados);
+            h1{
+                font-size: 3.5rem;
+                color: var(--color-titles-destacados);
+                margin-bottom: 15px;
+                letter-spacing: 2px;
+            }
+            span{
+                font-family: var(--parrafos-font-family);
+                color: var(--color2-titles-destacados);
+                font-size: 1.2rem;
+            }
+        }
+        
+        #origen-empresa{
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 40px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            .titulo-origen{
+                text-align: center;
+                margin-bottom: 30px;
+                h2{
+                    font-size: 2.8rem;
+                    color: var(--color-titles-destacados);
+                    margin-bottom: 10px;
+                }
+                span{
+                    font-family: var(--parrafos-font-family);
+                    color: var(--color2-titles-destacados);
+                    font-size: 1rem;
+                }
+            }
+            .texto-origen{
+                font-family: var(--parrafos-font-family);
+                color: var(--color2-titles-destacados);
+                font-size: 1.1rem;
+                line-height: 1.8;
+                text-align: justify;
+            }
+        }
+        
+        #seccion-linea-tiempo{
+            background-color: var(--backgroun-headers);
+            padding: 60px 20px;
+            border-top: 2px solid var(--color-borderDestacados);
+            border-bottom: 2px solid var(--color-borderDestacados);
+            .titulo-timeline{
+                text-align: center;
+                margin-bottom: 50px;
+                h2{
+                    font-size: 2.8rem;
+                    color: var(--color-titles-destacados);
+                    margin-bottom: 10px;
+                }
+                span{
+                    font-family: var(--parrafos-font-family);
+                    color: var(--color2-titles-destacados);
+                    font-size: 1rem;
+                }
+            }
+        }
+        
+        .timeline{
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+            &::before{
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 0;
+                bottom: 0;
+                width: 4px;
+                background: var(--background-buttons);
+                transform: translateX(-50%);
+            }
+        }
+        
+        .timeline-item{
+            position: relative;
+            width: 50%;
+            padding: 30px 40px;
+            margin-bottom: 40px;
+            &:nth-child(odd){
+                left: 0;
+                text-align: right;
+                padding-right: 60px;
+                .timeline-content{
+                    margin-right: 0;
+                }
+                .timeline-dot{
+                    right: -20px;
+                }
+            }
+            &:nth-child(even){
+                left: 50%;
+                text-align: left;
+                padding-left: 60px;
+                .timeline-content{
+                    margin-left: 0;
+                }
+                .timeline-dot{
+                    left: -20px;
+                }
+            }
+            .timeline-dot{
+                position: absolute;
+                top: 35px;
+                width: 40px;
+                height: 40px;
+                background: var(--background-buttons);
+                border: 5px solid var(--backgroun-headers);
+                border-radius: 50%;
+                z-index: 2;
+                transition: all 0.3s ease;
+            }
+            &:hover .timeline-dot{
+                transform: scale(1.3);
+                box-shadow: 0 0 20px rgba(85, 107, 47, 0.6);
+            }
+            .timeline-content{
+                background: #fff;
+                padding: 25px;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                transition: all 0.3s ease;
+                .year{
+                    font-family: var(--titles-font-family);
+                    font-size: 2rem;
+                    color: var(--background-buttons);
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+                h3{
+                    font-family: var(--titles-font-family);
+                    font-size: 1.5rem;
+                    color: var(--color2-titles-destacados);
+                    margin-bottom: 12px;
+                }
+                p{
+                    font-family: var(--parrafos-font-family);
+                    font-size: 1rem;
+                    color: var(--color2-titles-destacados);
+                    line-height: 1.6;
+                }
+            }
+            &:hover .timeline-content{
+                transform: translateY(-8px);
+                box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            }
+        }
+        
+        #seccion-crecimiento{
+            max-width: 1400px;
+            margin: 60px auto;
+            padding: 40px;
+            .titulo-crecimiento{
+                text-align: center;
+                margin-bottom: 50px;
+                h2{
+                    font-size: 2.8rem;
+                    color: var(--color-titles-destacados);
+                    margin-bottom: 10px;
+                }
+                span{
+                    font-family: var(--parrafos-font-family);
+                    color: var(--color2-titles-destacados);
+                    font-size: 1rem;
+                }
+            }
+        }
+        
+        #grid-crecimiento{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            .card-crecimiento{
+                background: #fff;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease;
+                h3{
+                    font-family: var(--titles-font-family);
+                    font-size: 1.6rem;
+                    color: var(--color-titles-destacados);
+                    margin-bottom: 15px;
+                }
+                p{
+                    font-family: var(--parrafos-font-family);
+                    font-size: 1rem;
+                    color: var(--color2-titles-destacados);
+                    line-height: 1.7;
+                }
+            }
+            .card-crecimiento:hover{
+                transform: translateY(-5px);
+                box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            }
+        }
+        
+        #galeria-historia{
+            background-color: var(--backgroun-headers);
+            padding: 60px 20px;
+            border-top: 2px solid var(--color-borderDestacados);
+            margin-top: 60px;
+            .titulo-galeria{
+                text-align: center;
+                margin-bottom: 50px;
+                h2{
+                    font-size: 2.8rem;
+                    color: var(--color-titles-destacados);
+                    margin-bottom: 10px;
+                }
+                span{
+                    font-family: var(--parrafos-font-family);
+                    color: var(--color2-titles-destacados);
+                    font-size: 1rem;
+                }
+            }
+        }
+        
+        #mosaico-galeria{
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 250px;
+            gap: 15px;
+            .item-galeria{
+                background: linear-gradient(135deg, #f5f5f0, #d4d4c8);
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                span{
+                    font-family: var(--parrafos-font-family);
+                    color: var(--color-titles-destacados);
+                    font-size: 0.9rem;
+                    text-align: center;
+                    padding: 10px;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .item-galeria:hover{
+                transform: scale(1.05);
+                box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+                z-index: 2;
+            }
+            .item-galeria:nth-child(1){
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+            .item-galeria:nth-child(4){
+                grid-column: span 2;
+            }
+            .item-galeria:nth-child(7){
+                grid-row: span 2;
+            }
+            .item-galeria:nth-child(9){
+                grid-column: span 2;
+            }
+        }
+        
+        #resumen-historia{
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 50px 40px;
+            background: var(--background-buttons);
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            text-align: center;
+            h2{
+                font-family: var(--titles-font-family);
+                font-size: 2.5rem;
+                color: var(--backgroun-headers);
+                margin-bottom: 25px;
+            }
+            p{
+                font-family: var(--parrafos-font-family);
+                font-size: 1.1rem;
+                color: var(--backgroun-headers);
+                line-height: 1.8;
+                text-align: justify;
+            }
+        }
+        
+        @media (max-width: 768px){
+            body{
+                font-size: 16px;
+            }
+            #header-historia{
+                padding: 40px 20px;
+                h1{
+                    font-size: 2.2rem;
+                }
+                span{
+                    font-size: 1rem;
+                }
+            }
+            #origen-empresa{
+                margin: 40px 20px;
+                padding: 30px;
+                .titulo-origen{
+                    h2{
+                        font-size: 2rem;
+                    }
+                }
+                .texto-origen{
+                    font-size: 1rem;
+                }
+            }
+            .timeline{
+                &::before{
+                    left: 30px;
+                }
+            }
+            .timeline-item{
+                width: 100%;
+                padding-left: 80px;
+                padding-right: 20px;
+                left: 0 !important;
+                text-align: left !important;
+                &:nth-child(odd){
+                    padding-right: 20px;
+                }
+                .timeline-dot{
+                    left: 10px !important;
+                    right: auto !important;
+                    width: 35px;
+                    height: 35px;
+                }
+                .timeline-content{
+                    .year{
+                        font-size: 1.5rem;
+                    }
+                    h3{
+                        font-size: 1.2rem;
+                    }
+                    p{
+                        font-size: 0.95rem;
+                    }
+                }
+            }
+            #grid-crecimiento{
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            #mosaico-galeria{
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 200px;
+                gap: 10px;
+                .item-galeria:nth-child(1){
+                    grid-column: span 2;
+                    grid-row: span 1;
+                }
+                .item-galeria:nth-child(4){
+                    grid-column: span 1;
+                }
+                .item-galeria:nth-child(7){
+                    grid-row: span 1;
+                }
+            }
+            #resumen-historia{
+                margin: 40px 20px;
+                padding: 30px;
+                h2{
+                    font-size: 1.8rem;
+                }
+                p{
+                    font-size: 1rem;
+                }
+            }
+        }
+        
+        @media (max-width: 430px){
+            body{
+                font-size: 14px;
+            }
+            #header-historia{
+                padding: 30px 15px;
+                h1{
+                    font-size: 1.8rem;
+                }
+                span{
+                    font-size: 0.9rem;
+                }
+            }
+            #origen-empresa{
+                margin: 30px 15px;
+                padding: 20px;
+                .titulo-origen{
+                    h2{
+                        font-size: 1.6rem;
+                    }
+                    span{
+                        font-size: 0.85rem;
+                    }
+                }
+                .texto-origen{
+                    font-size: 0.9rem;
+                }
+            }
+            .timeline-item{
+                padding-left: 70px;
+                padding-right: 15px;
+                margin-bottom: 30px;
+                .timeline-content{
+                    padding: 20px;
+                    .year{
+                        font-size: 1.3rem;
+                    }
+                    h3{
+                        font-size: 1.1rem;
+                    }
+                    p{
+                        font-size: 0.85rem;
+                    }
+                }
+            }
+            #seccion-crecimiento{
+                margin: 40px 15px;
+                padding: 20px;
+                .titulo-crecimiento{
+                    h2{
+                        font-size: 2rem;
+                    }
+                }
+            }
+            #grid-crecimiento{
+                .card-crecimiento{
+                    padding: 20px;
+                    h3{
+                        font-size: 1.3rem;
+                    }
+                    p{
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+            #mosaico-galeria{
+                grid-template-columns: 1fr;
+                grid-auto-rows: 180px;
+                .item-galeria:nth-child(1){
+                    grid-column: span 1;
+                }
+            }
+            #resumen-historia{
+                margin: 30px 15px;
+                padding: 25px;
+                h2{
+                    font-size: 1.5rem;
+                }
+                p{
+                    font-size: 0.9rem;
+                }
+            }
+        }
