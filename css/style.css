@@ -516,16 +516,16 @@ footer{
     }
 }
 @keyframes slide {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(0); }
+    0% { transform: translateX(0)}
+    25% { transform: translateX(0)}
   
-    33.33% { transform: translateX(-33.4%); } 
-    58.33% { transform: translateX(-33.4%); }
+    33.33% { transform: translateX(-33.4%)}
+    58.33% { transform: translateX(-33.4%)}
   
-    66.66% { transform: translateX(-66.6%); } 
-    91.66% { transform: translateX(-66.6%); }
+    66.66% { transform: translateX(-66.6%)}
+    91.66% { transform: translateX(-66.6%)}
     
-    100% {transform: translateX(0);}
+    100% {transform: translateX(0)}
 }
 .reloj-destacado:hover{
     transform: scale(1.05);
@@ -537,4 +537,823 @@ footer{
     transform: scale(1.05);
 }
 
+
+/* Media Queries para Laptops (1025px - 1500px) */
+@media (max-width: 1500px) and (min-width: 1025px) {
+    body {
+        font-size: 19px;
+    }
+
+    #top {
+        height: 9vh;
+        .opciones {
+            margin-left: 0.8%;
+            margin-right: 1.5%;
+            .text-header {
+                font-size: 0.95rem;
+                margin-left: 12px;
+            }
+        }
+        .logo h1 {
+            font-size: 1.8rem;
+        }
+    }
+
+    #slider-main {
+        .content-img-text {
+            height: 55vh;
+            .text-slider {
+                width: 32%;
+                left: 5%;
+                span {
+                    font-size: 0.95rem;
+                }
+                h2 {
+                    font-size: 2rem;
+                    margin-top: 2.5%;
+                }
+                p {
+                    font-size: 1.1rem;
+                }
+                .button {
+                    width: 40%;
+                    height: 24%;
+                    font-size: 0.95rem;
+                }
+            }
+        }
+    }
+
+    #relojes-destacados {
+        #title-relojes-destacados {
+            height: 22vh;
+            font-size: 1.8rem;
+            div {
+                margin-top: 2.5%;
+                h1 {
+                    font-size: 2rem;
+                }
+                span {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+        #grid-relojes-destacados {
+            width: 80%;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5%;
+            padding: 25px;
+            .reloj-destacado {
+                .img-reloj-destacado {
+                    height: auto;
+                }
+                .info {
+                    padding: 12px;
+                    .name-reloj-destacado {
+                        font-size: 1.1rem;
+                    }
+                    .descripcion-reloj-destacado {
+                        font-size: 0.85rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-linea-tiempo {
+        margin-top: 3.5%;
+        .titles-line-tiempo {
+            font-size: 2.3em;
+        }
+    }
+
+    .timeline {
+        padding: 3.5% 0;
+        width: 95%;
+    }
+
+    .timeline-card {
+        width: 75%;
+        padding: 4%;
+    }
+
+    .icon {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    .year {
+        font-size: 1.2em;
+    }
+
+    .title {
+        font-size: 1.15em;
+    }
+
+    .description {
+        font-size: 0.88em;
+    }
+
+    #historico {
+        margin: 4%;
+        padding: 2.5%;
+        #Origen {
+            height: 28vh;
+            .titular {
+                h1 {
+                    font-size: 2.8rem;
+                }
+                span {
+                    font-size: 0.78rem;
+                }
+            }
+            p {
+                font-size: 0.95rem;
+                margin-top: 1.8%;
+            }
+        }
+        #identidad-empresa {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5%;
+            .card {
+                padding: 2%;
+                h1 {
+                    font-size: 1.3rem;
+                }
+                p {
+                    font-size: 0.92rem;
+                    margin: 3%;
+                }
+            }
+        }
+    }
+
+    footer {
+        grid-template-columns: repeat(3, 1fr);
+        #header-footer {
+            grid-column: span 2;
+            font-size: 1.1rem;
+            padding: 2.5%;
+        }
+        #dev-contacto-empresa {
+            padding: 4%;
+            h3 {
+                font-size: 1.1rem;
+            }
+            #contact-dev {
+                a #logo-github {
+                    width: 11%;
+                    height: 23%;
+                }
+            }
+            span {
+                font-size: 1.1rem;
+            }
+        }
+        #copyright {
+            font-size: 0.95rem;
+            #derechos {
+                margin-left: 2%;
+                margin-bottom: 1.8%;
+            }
+        }
+    }
+}
+
+/* Media Queries para Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    #top {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 10px;
+        .opciones {
+            margin: 5px;
+            .text-header {
+                font-size: 0.9rem;
+            }
+        }
+        .logo h1 {
+            font-size: 1.5rem;
+        }
+    }
+
+    #slider-main {
+        .content-img-text {
+            height: 50vh;
+            .text-slider {
+                width: 35%;
+                h2 {
+                    font-size: 1.8rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
+                .button {
+                    width: 45%;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+
+    #relojes-destacados {
+        #title-relojes-destacados {
+            height: 20vh;
+            font-size: 1.5rem;
+            div span {
+                font-size: 1.2rem;
+            }
+        }
+        #grid-relojes-destacados {
+            width: 85%;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3%;
+        }
+    }
+
+    .timeline {
+        padding: 3% 0;
+    }
+
+    .timeline-card {
+        width: 80%;
+    }
+
+    #historico {
+        margin: 3%;
+        #Origen {
+            height: auto;
+            .titular h1 {
+                font-size: 2.5rem;
+            }
+        }
+        #identidad-empresa {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 3%;
+        }
+    }
+
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+        #header-footer {
+            grid-column: span 1;
+        }
+        #dev-contacto-empresa {
+            grid-column: span 1;
+            grid-row: span 2;
+        }
+        #copyright {
+            grid-column: span 1;
+        }
+    }
+}
+
+/* Media Queries para Móviles (481px - 767px) */
+@media (max-width: 767px) {
+    body {
+        font-size: 16px;
+        overflow-x: hidden;
+    }
+
+    #top {
+        height: auto;
+        flex-direction: column;
+        padding: 15px 10px;
+        .opciones {
+            border-left: none;
+            border-bottom: solid 2px var(--color-borderHeader);
+            width: 100%;
+            text-align: center;
+            margin: 5px 0;
+            padding: 10px 0;
+            .text-header {
+                margin-left: 0;
+                font-size: 1rem;
+            }
+        }
+        .opciones:last-child {
+            border-bottom: none;
+        }
+        .logo {
+            order: -1;
+            margin: 10px 0;
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    /* Hero estático mejorado para móviles */
+    #slider-main {
+        width: 100%;
+        height: auto;
+        animation: none;
+        overflow: hidden;
+        
+        .content-img-text {
+            width: 100%;
+            height: 75vh;
+            min-height: 500px;
+            position: relative;
+            
+            &:nth-child(2),
+            &:nth-child(3) {
+                display: none;
+            }
+            
+            .img-slider {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                filter: brightness(0.6);
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            
+            /* Overlay con gradiente para mejor legibilidad */
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(
+                    to bottom,
+                    rgba(28, 28, 28, 0.3) 0%,
+                    rgba(28, 28, 28, 0.5) 50%,
+                    rgba(28, 28, 28, 0.7) 100%
+                );
+                z-index: 1;
+            }
+            
+            .text-slider {
+                position: absolute;
+                width: 88%;
+                left: 6%;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 2;
+                border-left: 4px solid var(--background-buttons);
+                padding-left: 5%;
+                background: rgba(253, 251, 247, 0.15);
+                backdrop-filter: blur(10px);
+                padding: 25px 20px;
+                border-radius: 0 15px 15px 0;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+                
+                span {
+                    font-size: 0.75rem;
+                    display: block;
+                    margin-bottom: 10px;
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    color: var(--color-slider);
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                }
+                
+                h2 {
+                    font-size: 2rem;
+                    margin: 0 0 15px 0;
+                    padding: 0;
+                    line-height: 1.2;
+                    color: var(--color-slider);
+                    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+                    font-weight: 700;
+                    background: none;
+                }
+                
+                p {
+                    font-size: 0.95rem;
+                    margin: 0 0 20px 0;
+                    line-height: 1.5;
+                    color: var(--color-slider);
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                    font-weight: 400;
+                }
+                
+                .button {
+                    position: relative;
+                    width: 160px;
+                    height: 45px;
+                    font-size: 0.95rem;
+                    margin: 0;
+                    padding: 0;
+                    display: inline-block;
+                    background: var(--background-buttons);
+                    color: var(--color-slider);
+                    border: 2px solid var(--color-slider);
+                    border-radius: 50px;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    box-shadow: 0 4px 15px rgba(85, 107, 47, 0.4);
+                    
+                    &:hover {
+                        transform: translateY(-3px);
+                        box-shadow: 0 6px 20px rgba(85, 107, 47, 0.6);
+                        background: rgba(85, 107, 47, 0.9);
+                    }
+                }
+                
+                a {
+                    text-decoration: none;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    #relojes-destacados {
+        #title-relojes-destacados {
+            height: auto;
+            padding: 20px 10px;
+            font-size: 1.2rem;
+            div {
+                margin-top: 0;
+                h1 {
+                    font-size: 1.5rem;
+                }
+                span {
+                    font-size: 1rem;
+                }
+            }
+        }
+        #grid-relojes-destacados {
+            width: 90%;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+            padding: 15px;
+            .reloj-destacado {
+                .img-reloj-destacado {
+                    height: 300px;
+                    object-fit: contain;
+                }
+                .info {
+                    .name-reloj-destacado {
+                        font-size: 1.1rem;
+                    }
+                    .descripcion-reloj-destacado {
+                        font-size: 0.85rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-linea-tiempo {
+        margin-top: 8%;
+        .titles-line-tiempo {
+            font-size: 1.8em;
+        }
+    }
+
+    .timeline {
+        flex-direction: column;
+        padding: 20px 0;
+        &::before {
+            left: 20px;
+            right: auto;
+            width: 4px;
+            height: 100%;
+            top: 0;
+            transform: none;
+        }
+    }
+
+    .timeline-item {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 30px;
+        padding: 0;
+        &:nth-child(odd),
+        &:nth-child(even) {
+            .timeline-card {
+                order: 2;
+                margin: 0 0 0 40px;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            .timeline-dot {
+                order: 1;
+                margin-top: 20px;
+            }
+            .connector {
+                display: none;
+            }
+        }
+    }
+
+    .timeline-dot {
+        width: 20px;
+        height: 20px;
+        border: 4px solid var(--background-buttons);
+        position: absolute;
+        left: 12px;
+    }
+
+    .timeline-card {
+        width: calc(100% - 60px);
+        min-height: auto;
+        padding: 15px;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .year {
+        font-size: 1.1em;
+    }
+
+    .title {
+        font-size: 1em;
+    }
+
+    .description {
+        font-size: 0.85em;
+        max-height: 200px;
+        opacity: 1;
+        margin-top: 10px;
+    }
+
+    #historico {
+        margin: 5%;
+        padding: 5%;
+        #Origen {
+            height: auto;
+            padding: 5%;
+            .titular {
+                h1 {
+                    font-size: 2rem;
+                }
+                span {
+                    font-size: 0.75rem;
+                }
+            }
+            p {
+                font-size: 0.9rem;
+                margin-top: 5%;
+            }
+        }
+        #identidad-empresa {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 15px;
+            .card {
+                padding: 5%;
+                h1 {
+                    font-size: 1.3rem;
+                }
+                p {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: 20px;
+        #header-footer {
+            grid-column: span 1;
+            height: auto;
+            padding: 10px 0;
+            font-size: 1rem;
+            border-bottom: solid 2px var(--color-borderHeader);
+        }
+        #dev-contacto-empresa {
+            grid-column: span 1;
+            grid-row: auto;
+            border-left: none;
+            border-top: solid 2px var(--color-borderHeader);
+            padding: 20px 0;
+            h3 {
+                font-size: 1rem;
+                margin-bottom: 10px;
+            }
+            #contact-dev {
+                margin-bottom: 15px;
+                a #logo-github {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+            span {
+                font-size: 0.9rem;
+            }
+        }
+        #copyright {
+            grid-column: span 1;
+            border-top: solid 2px var(--color-borderHeader);
+            padding-top: 15px;
+            #derechos {
+                margin-left: 0;
+                text-align: center;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+/* Media Queries para Móviles Pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+        overflow-x: hidden;
+    }
+
+    #top {
+        .logo h1 {
+            font-size: 1.5rem;
+        }
+        .opciones .text-header {
+            font-size: 0.9rem;
+        }
+    }
+
+    /* Carrusel optimizado para móviles pequeños */
+    #slider-main {
+        width: 100%;
+        overflow: hidden;
+        .content-img-text {
+            height: 65vh;
+            min-width: 100%;
+            .img-slider {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                filter: brightness(0.7);
+            }
+            .text-slider {
+                width: 80%;
+                left: 10%;
+                border-left: 2px solid #556B2F;
+                padding-left: 4%;
+                span {
+                    font-size: 0.75rem;
+                    display: block;
+                    margin-bottom: 6px;
+                    font-weight: 500;
+                }
+                h2 {
+                    font-size: 1.5rem;
+                    margin-top: 0;
+                    margin-left: 0;
+                    padding: 6px 10px;
+                    line-height: 1.2;
+                    max-width: 85%;
+                }
+                p {
+                    font-size: 0.85rem;
+                    margin-top: 8px;
+                    margin-left: 0;
+                    line-height: 1.3;
+                    max-width: 85%;
+                }
+                .button {
+                    position: relative;
+                    width: 130px;
+                    height: 38px;
+                    font-size: 0.85rem;
+                    margin-top: 12px;
+                    margin-left: 0;
+                    padding: 0;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    #relojes-destacados {
+        #title-relojes-destacados {
+            div h1 {
+                font-size: 1.3rem;
+            }
+        }
+        #grid-relojes-destacados {
+            width: 95%;
+            .reloj-destacado {
+                .img-reloj-destacado {
+                    height: 250px;
+                }
+            }
+        }
+    }
+
+    .header-linea-tiempo {
+        .titles-line-tiempo {
+            font-size: 1.5em;
+        }
+    }
+
+    .timeline-card {
+        width: calc(100% - 50px);
+        padding: 12px;
+    }
+
+    #historico {
+        margin: 3%;
+        padding: 4%;
+        #Origen {
+            .titular h1 {
+                font-size: 1.7rem;
+            }
+        }
+        #identidad-empresa {
+            .card h1 {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    footer {
+        padding: 15px;
+        #dev-contacto-empresa {
+            span {
+                font-size: 0.85rem;
+                word-break: break-word;
+            }
+        }
+    }
+}
+
+/* Ajustes adicionales para mejor experiencia en móviles */
+@media (max-width: 767px) {
+    /* Hacer que las imágenes se adapten mejor */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Mejorar el espaciado en móviles */
+    section {
+        padding: 10px 0;
+    }
+
+    /* Ajustar animaciones para dispositivos móviles */
+    .reloj-destacado:hover,
+    .button:hover,
+    .card:hover {
+        transform: scale(1.02);
+    }
+
+    /* Asegurar que el contenido no se desborde */
+    * {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+}
+
+/* Landscape mode para móviles */
+@media (max-width: 767px) and (orientation: landscape) {
+    #slider-main {
+        .content-img-text {
+            height: 85vh;
+            .text-slider {
+                width: 50%;
+                left: 5%;
+                h2 {
+                    font-size: 1.4rem;
+                }
+                p {
+                    font-size: 0.8rem;
+                }
+                .button {
+                    width: 120px;
+                    height: 35px;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+    #top {
+        flex-direction: row;
+        flex-wrap: wrap;
+        .logo {
+            width: 100%;
+            order: -1;
+        }
+        .opciones {
+            width: auto;
+            flex: 1;
+        }
+    }
+}
 /*terminado*/
