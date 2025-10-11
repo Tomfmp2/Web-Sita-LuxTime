@@ -200,13 +200,18 @@
             body{
                 font-size: 16px;
             }
-            #header-catalogo{
-                padding: 40px 20px;
-                h1{
-                    font-size: 2rem;
+            #top {
+                height: 9vh;
+                .opciones {
+                    margin-left: 0.8%;
+                    margin-right: 1.5%;
+                    .text-header {
+                        font-size: 0.95rem;
+                        margin-left: 12px;
+                    }
                 }
-                span{
-                    font-size: 1rem;
+                .logo h1 {
+                    font-size: 1.8rem;
                 }
             }
             .seccion-catalogo{
@@ -247,27 +252,35 @@
             body{
                 font-size: 14px;
             }
-            #header-catalogo{
-                padding: 30px 15px;
-                h1{
-                    font-size: 1.5rem;
-                }
-                span{
-                    font-size: 0.85rem;
-                }
-            }
-            .seccion-catalogo{
-                margin-bottom: 40px;
-                .titulo-seccion{
-                    padding: 15px 0;
-                    h2{
-                        font-size: 1.4rem;
-                    }
-                    span{
-                        font-size: 0.8rem;
+            
+            #top {
+                height: auto;
+                flex-direction: column;
+                padding: 15px 10px;
+                .opciones {
+                    border-left: none;
+                    border-bottom: solid 2px var(--color-borderHeader);
+                    width: 100%;
+                    text-align: center;
+                    margin: 5px 0;
+                    padding: 10px 0;
+                    .text-header {
+                        margin-left: 0;
+                        font-size: 1rem;
                     }
                 }
+                .opciones:last-child {
+                    border-bottom: none;
+                }
+                .logo {
+                    order: -1;
+                    margin: 10px 0;
+                    h1 {
+                        font-size: 1.8rem;
+                    }
+                }
             }
+
             #grid-productos{
                 width: 100%;
                 grid-template-columns: repeat(1, 1fr);

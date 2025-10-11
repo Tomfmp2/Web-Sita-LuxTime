@@ -674,6 +674,9 @@ footer{
                 margin-top: 1.8%;
             }
         }
+        .card{
+            margin-top: 15vh;
+        }
         #identidad-empresa {
             grid-template-columns: repeat(3, 1fr);
             gap: 2.5%;

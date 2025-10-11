@@ -398,15 +398,35 @@ h1, h2, h3{
     body{
         font-size: 16px;
     }
-    #header-historia{
-        padding: 40px 20px;
-        h1{
-            font-size: 2.2rem;
+    
+    #top {
+        height: auto;
+        flex-direction: column;
+        padding: 15px 10px;
+        .opciones {
+            border-left: none;
+            border-bottom: solid 2px var(--color-borderHeader);
+            width: 100%;
+            text-align: center;
+            margin: 5px 0;
+            padding: 10px 0;
+            .text-header {
+                margin-left: 0;
+                font-size: 1rem;
+            }
         }
-        span{
-            font-size: 1rem;
+        .opciones:last-child {
+            border-bottom: none;
+        }
+        .logo {
+            order: -1;
+            margin: 10px 0;
+            h1 {
+                font-size: 1.8rem;
+            }
         }
     }
+
     #origen-empresa{
         margin: 40px 20px;
         padding: 30px;
