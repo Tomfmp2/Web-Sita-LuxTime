@@ -74,6 +74,7 @@ p{
     }
     .opciones:nth-child(3){
         margin: 0;
+        margin-right: 1%;
     }
     .opciones:nth-child(4){
         margin: 0;
@@ -268,6 +269,9 @@ footer{
             font-size: 1.2rem;
             font-weight: normal;
         }
+        a{
+            color: #FDFBF7;
+        }
     }
     #copyright{
         align-self: end;
@@ -275,10 +279,12 @@ footer{
         grid-row-start: 2;
         font-size: 1rem;
         #derechos{
-            margin-left: 2%;
+            margin-left: 3%;
             margin-bottom: 1.5%;
         }
-        
+        p{
+            margin-left: 3%;
+        }
     }
 }
 .header-linea-tiempo {
@@ -537,6 +543,16 @@ footer{
     transform: scale(1.05);
 }
 
+#mapeado-web-site-luxTime{
+    margin-top: 1%;
+    border-top: solid 2px var(--color-borderHeader);
+    border-bottom: solid 2px var(--color-borderHeader);
+    a{ 
+        margin-top: 2%;
+        color: #FDFBF7;
+        margin-bottom: 1%;
+    }
+}
 
 /* Media Queries para Laptops (1025px - 1500px) */
 @media (max-width: 1500px) and (min-width: 1025px) {
